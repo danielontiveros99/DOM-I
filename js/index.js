@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src',siteContent["cta"]["img-src"])
+
+// let ctaText = document.getElementsByClassName("cta-text h1")
+// ctaText.textContent(siteContent["cta"]["h1"])
+
+// let ctaText = document.getElementsByClassName("cta-text h1")
+// ctaText.childNodes[1].textContent(siteContent["cta"]["h1"])
+
+// let ctaText = document.getElementsByClassName("cta-text h1")
+// ctaText.childNodes.textContent(siteContent["cta"]["h1"])
+
+
+// let text = document.getElementsByClassName("cta-text h1").textContent;
+// console.log(text);
+
+
+
+
+
+
+
+
+const nav = document.querySelectorAll("header nav a")
+nav.forEach(function(value, i){
+  value.textContent = siteContent.nav[`nav-item-${i+1}`]
+nav.forEach(value => { 
+  value.style.color= '#B0FF92';
+})
+});
+
+const newContent1 = document.createElement('a');
+newContent1.textContent = "Order";
+const newA1 = document.querySelector('nav');
+newA1.prepend(newContent1);
+
+const newContent = document.createElement('a');
+newContent.textContent = "Order Now";
+const newA = document.querySelector('nav');
+newA.append(newContent);
+
+
+
+// const cta = document.getElementsByClassName("cta");
+// textContent = siteContent.cta('h1');
+// console.log(cta);
+
+
+
+// const attributeTag = document.querySelectorAll('a')
+// let i = 0;
+// attributeTag.forEach(a => {
+//  a.textContent = siteContent.nav[`nav-item-${i}`]
+//  attributeTag[i].style.color= '#B0FF92';
+//  i++
+// });
+
+console.log(document);
